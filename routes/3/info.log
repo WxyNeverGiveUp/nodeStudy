@@ -1,0 +1,6 @@
+this is test string
+hoge foo
+hoge { foo: 'foo' }
+10 10.5
+NaN
+% hoge
