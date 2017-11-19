@@ -11,3 +11,9 @@ fs.watchFile('./message.txt',function (curr,prev) {
        console.log('message文件被修改了');
    }
 });
+fs.watchFile('./message.txt',function (curr,prev) {
+   if (Date.parse(curr.ctime) != 0){
+       console.log(curr.ctime);
+       console.log('message.txt文件的尺寸为' + curr.size + '字节');
+   }
+});
