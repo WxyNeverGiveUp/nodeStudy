@@ -1,0 +1,34 @@
+[
+  {
+    "province": "河北",
+    "id": "1",
+    "items":[
+      {
+        "parentNode": "河北",
+        "id": "11",
+        "name": "鞍山"
+      },
+      {
+        "parentNode": "河北",
+        "id": "22",
+        "name": "保定"
+      }
+    ]
+  },
+  {
+    "province": "吉林",
+    "id": "2",
+    "items":[
+      {
+        "parentNode": "吉林",
+        "id": "21",
+        "name": "长春"
+      },
+      {
+        "parentNode": "吉林",
+        "id": "22",
+        "name": "朝鲜"
+      }
+    ]
+  }
+]
