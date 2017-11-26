@@ -79,7 +79,7 @@ function get(query,response) {
     for(key in queryObj){
         console.log('key:' + key + ', value:' + queryObj[key]);
     }
-    var type = queryObj['type'];
+    var type = queryObj['type']; // localhost:8080?type=text
     switch (type) {
         case 'text':
             getText(response);
