@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>向HTTP服务器发送请求,使用ajax获取Node.js服务器数据</title>
+</head>
+<body>
+	<div id="div"></div>
+	<button type="button" onclick="getData()">获取数据</button>
+	<script type="text/javascript">
+		function getData() {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET','http://localhost:3000',true);
+			xhr.onreadystatechange = function (){
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						document.getElementById('div').innerHTML = xhr.responseText;
+					}
+				}
+			}
+			xhr.send('接收到了！');
+		}
+	</script>
+</body>
+</html>
