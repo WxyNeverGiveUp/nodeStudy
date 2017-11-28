@@ -15,6 +15,8 @@ var server = http.createServer(function (req,res) {
            'Access-Control-Allow-Origin': 'http://localhost'
         });
         res.write('<h1>你好</h1>');
+        console.log(res.getHeader('Access-Control-Allow-Origin'));
+        console.log(res.getHeader('Content-Type'));
     }
     res.end();
 }).listen(3000,'localhost');
