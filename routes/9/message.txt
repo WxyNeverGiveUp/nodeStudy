@@ -1,0 +1,9 @@
+
+D:\wxyTest\nodeStudy\routes\9>node test1.js one two three three 
+子进程当前工作目录为：D:\wxyTest\nodeStudy\routes\9
+0:D:\node\node.exe
+1:D:\wxyTest\nodeStudy\routes\9\test1.js
+2:one
+3:two
+4:three
+5:three
