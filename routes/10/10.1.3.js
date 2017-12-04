@@ -15,7 +15,7 @@ http.createServer(function (req,res) {
             res.end('你好\n');
         }
 }).listen(3000,'127.0.0.1');
-process.on('uncaughtException',function (ex) { // 代替 try..catch
+process.on('uncaughtException',function (ex) { // 代替 try..catch 但是这是一种'粗鲁'的处理方式，客户端永远得不到服务器端的响应
     console.log('接收客户端请求时发生以下错误：');
-    console.log(ex)
+    console.log(ex); // 打印出异常 不报错
 });
