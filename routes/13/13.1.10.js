@@ -30,7 +30,8 @@ db.open(function (err,db) {
             }
             else{
                 collection.find({
-                    'goods.0.type':'food' // 查goods数组中第一个对象
+                    'goods.type':'food', // 查goods数组中第一个对象
+                    'goods.price':{$lte:10}
                 }).toArray(function (err,docs) {
                     if(err){
                         throw err;
