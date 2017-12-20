@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用于提交cookie的index.html页面</title>
+</head>
+<body>
+	<h1>用于提交cookie的index</h1>
+	<form id="form1" enctype="multipart/form-data">
+		<input type="button" value="提交cookie" onclick="cookieTest();">
+	</form>
+	<output id="result"></output>
+	<script type="text/javascript">
+		function cookieTest() {
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST','index/cookie',true);
+			var firstname_cookie = encodeURIComponent("吴晓阳");
+			var username_cookie = encodeURIComponent("吴晓阳");
+			document.cookie = 'firstname=' + firstname_cookie;
+			document.cookie = 'username=' + username_cookie;
+			xhr.onreadystatechange = function () {
+				if(xhr.readyState == 4 && xhr.status == 200){
+					document.getElementById('result').innerHTML = xhr.responseText;
+				}
+			}
+			xhr.send();
+			console.log(decodeURIComponent(document.cookie)); // 解码打印
+		}
+	</script>
+</body>
+</html>
